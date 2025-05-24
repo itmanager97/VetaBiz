@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #202020, #000);
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(135deg, #d1aa62, #1a1a1a);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for navbar links if needed, Bootstrap handles most of it */
+/* Example:
+nav a {
+    color: #fff !important;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700 !important;
+}
+*/
+
+/* The .navbar-dark .nav-link styling from Bootstrap is already quite good.
+   You can override specific aspects here if needed.
+   For example, to ensure your custom hover color: */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffd700 !important; /* Your desired hover color */
+}
+.navbar-dark .navbar-nav .nav-link {
+    transition: color 0.3s;
+}
+
+
+section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #d1aa62;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.service {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h3 {
+    color: #d1aa62;
+    margin-top: 0;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service p {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #fff;
+}
