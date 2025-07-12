@@ -3,21 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetaBiz Solutions</title>
+    <title>VetaBiz Group - Consultoría Innovadora</title>
+    <!-- Google Fonts -->
+    <!-- Montserrat for Logo/Headings (Bold) and Subheadings (Semi-Bold) -->
+    <!-- Open Sans for Body (Regular) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    
+    <!-- Custom CSS (will be provided later, but linked here) -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (optional, but good for robustness) -->
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>VetaBiz Solutions</h1>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link d-flex align-items-center">
+                    <!-- Logo Image Placeholder -->
+                    <!-- This image will be hidden by default with CSS, visible if provided -->
+                    <img src="path/to/your/logo-image.png" alt="VetaBiz Group Logo" class="logo-img img-fluid d-none mr-2"> 
+                    
+                    <!-- Text Logo with specific color separation -->
+                    <span class="logo-text">
+                        <span class="logo-part-vetabi">VetaBi</span><span class="logo-part-z">z</span> <span class="logo-part-group">Group</span>
+                    </span>
+                    <!-- CSS will apply:
+                         .logo-part-vetabi { color: #2C2C2C; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+                         .logo-part-z { color: #C7A349; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+                         .logo-part-group { color: #2C2C2C; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+                    -->
+                </a>
+            </div>
+            <!-- Optional: Add contact info or secondary nav elements here -->
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #2C2C2C;">
         <div class="container">
-            <a class="navbar-brand" href="#">VetaBiz</a>
+            <a class="navbar-brand" href="#">
+                <!-- Navbar Logo: Can be a smaller version or just text -->
+                <img src="path/to/your/navbar-logo-image.png" alt="VetaBiz Group Logo" class="navbar-logo-img d-none d-md-inline-block mr-2" style="height: 30px;">
+                <span class="navbar-logo-text">VetaBiz Group</span>
+                <!-- CSS will apply:
+                     .navbar-logo-text { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #F6F5F2; }
+                -->
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,6 +68,9 @@
                         <a class="nav-link" href="#servicios">SERVICIOS</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#nuestra-diferencia">NUESTRA DIFERENCIA</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#nosotros">NOSOTROS</a>
                     </li>
                     <li class="nav-item">
@@ -39,72 +80,179 @@
             </div>
         </div>
     </nav>
-    <section id="inicio">
-        <div class="container">
-            <h2>Inicio</h2>
-            <p>En Vetabiz, nos dedicamos a apoyar a negocios en crecimiento, adaptando nuestros servicios para satisfacer las necesidades únicas de los nuevos emprendedores.</p>
-        </div>
-    </section>
-    <section id="servicios">
-        <div class="container">
-            <h2>Servicios</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Consultoría Estratégica</h3>
-                        <p>Desarrollamos estrategias personalizadas para optimizar el crecimiento y la rentabilidad de su negocio, identificando oportunidades y mitigando riesgos.</p>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section text-center py-5" style="background-color: #F6F5F2;">
+            <div class="container">
+                <h1 class="display-4 mb-4">
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2C2C2C;">
+                        Desbloquea el Potencial de tu Negocio con
+                    </span>
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #C7A349;">
+                        VetaBiz Group
+                    </span>
+                </h1>
+                <p class="lead mb-5" style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                    Consultoría estratégica e innovadora para empresas que buscan crecer y liderar en el mercado actual.
+                </p>
+                <a href="#contacto" class="btn btn-lg cta-button" style="background-color: #C7A349; color: #2C2C2C; font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    Comienza Tu Transformación Hoy
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-5" style="background-color: #F6F5F2;">
+            <div class="container">
+                <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2C2C2C;">Nuestros Servicios Clave</h2>
+                <div class="row">
+                    <!-- Service 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Consultoría Estratégica</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Desarrollamos estrategias personalizadas para optimizar el crecimiento y la rentabilidad de su negocio, identificando oportunidades y mitigando riesgos.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Asesoramiento Financiero</h3>
-                        <p>Proporcionamos análisis financiero detallado y recomendaciones para mejorar la gestión financiera, la planificación presupuestaria y el acceso a la financiación.</p>
+                    <!-- Service 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Asesoramiento Financiero</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Proporcionamos análisis financiero detallado y recomendaciones para mejorar la gestión financiera, la planificación presupuestaria y el acceso a la financiación.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Transformación Digital</h3>
-                        <p>Guiamos a las empresas en su viaje hacia la transformación digital, implementando soluciones tecnológicas innovadoras para mejorar la eficiencia operativa y la experiencia del cliente.</p>
+                    <!-- Service 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Transformación Digital</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Guiamos a las empresas en su viaje hacia la transformación digital, implementando soluciones tecnológicas innovadoras para mejorar la eficiencia operativa y la experiencia del cliente.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Desarrollo Organizacional</h3>
-                        <p>Diseñamos programas de desarrollo de liderazgo y capacitación para impulsar el crecimiento del talento interno y fortalecer la cultura organizacional.</p>
+                    <!-- Service 4 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Desarrollo Organizacional</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Diseñamos programas de desarrollo de liderazgo y capacitación para impulsar el crecimiento del talento interno y fortalecer la cultura organizacional.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Gestión del Cambio</h3>
-                        <p>Facilitamos la transición suave a través de períodos de cambio organizacional, proporcionando estrategias efectivas de comunicación y gestión del cambio.</p>
+                    <!-- Service 5 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Gestión del Cambio</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Facilitamos la transición suave a través de períodos de cambio organizacional, proporcionando estrategias efectivas de comunicación y gestión del cambio.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Optimización de Procesos</h3>
-                        <p>Identificamos y eliminamos ineficiencias en los procesos empresariales, mejorando la productividad y reduciendo costos operativos.</p>
+                    <!-- Service 6 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card p-4 border rounded shadow-sm h-100" style="background-color: #FFFFFF;">
+                            <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Optimización de Procesos</h3>
+                            <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">Identificamos y eliminamos ineficiencias en los procesos empresariales, mejorando la productividad y reduciendo costos operativos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="nosotros">
-        <div class="container">
-            <h2>Nosotros</h2>
-            <p>Con un enfoque moderno y eficiente, desafiamos los métodos de consultoría tradicionales para ayudar a las empresas a desbloquear su máximo potencial en el mercado actual. Priorizamos la innovación y la personalización para adaptarnos al cambiante panorama empresarial.</p>
-        </div>
-    </section>
-    <section id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Para más información, contáctanos:</p>
-            <p>Email: info@vetabiz.com</p>
-            <p>Teléfono: (51) 969003445</p>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>© 2024 VetaBiz Solutions. Todos los derechos reservados.</p>
+        </section>
+
+        <!-- Our Difference Section -->
+        <section id="nuestra-diferencia" class="py-5" style="background-color: #2C2C2C; color: #F6F5F2;">
+            <div class="container">
+                <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Nuestra Diferencia Innovadora</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="path/to/your/innovation-image.jpg" alt="VetaBiz Innovation" class="img-fluid rounded shadow">
+                        <!-- Placeholder for an image representing innovation or modern approach -->
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Enfoque Ágil y Centrado en Resultados</h3>
+                        <p class="mb-4" style="font-family: 'Open Sans', sans-serif;">
+                            Nos diferenciamos por nuestra metodología ágil, que nos permite adaptarnos rápidamente a las dinámicas del mercado y ofrecer soluciones personalizadas con un enfoque claro en resultados medibles. No solo asesoramos, implementamos.
+                        </p>
+                        <h3 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #C7A349;">Tecnología de Vanguardia</h3>
+                        <p style="font-family: 'Open Sans', sans-serif;">
+                            Integramos las últimas herramientas y tecnologías en nuestros procesos de consultoría para garantizar que nuestros clientes no solo sobrevivan, sino que prosperen en la era digital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="nosotros" class="py-5" style="background-color: #F6F5F2;">
+            <div class="container">
+                <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2C2C2C;">Sobre VetaBiz Group</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                        <img src="path/to/your/about-us-image.jpg" alt="VetaBiz Team" class="img-fluid rounded shadow">
+                        <!-- Placeholder for a team image or company value image -->
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <p class="lead mb-4" style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                            En VetaBiz Group, nos dedicamos a apoyar a negocios en crecimiento y empresas establecidas, adaptando nuestros servicios para satisfacer las necesidades únicas de cada cliente. Nuestro equipo está formado por expertos apasionados por la innovación y el éxito empresarial.
+                        </p>
+                        <p style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                            Con un enfoque moderno y eficiente, desafiamos los métodos de consultoría tradicionales para ayudar a las empresas a desbloquear su máximo potencial en el mercado actual. Priorizamos la innovación y la personalización para adaptarnos al cambiante panorama empresarial, asegurando que su negocio no solo siga el ritmo, sino que lidere la transformación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact Section -->
+        <section id="contacto" class="py-5 text-center text-white" style="background-color: #C7A349;">
+            <div class="container">
+                <h2 class="mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2C2C2C;">¿Listo para Transformar tu Negocio?</h2>
+                <p class="lead mb-5" style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                    Contáctanos hoy para una consulta gratuita y descubre cómo VetaBiz Group puede impulsar tu crecimiento.
+                </p>
+                <div class="contact-info mb-4">
+                    <p class="mb-1" style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                        <strong>Email:</strong> <a href="mailto:info@vetabiz.com" style="color: #2C2C2C; text-decoration: underline;">info@vetabiz.com</a>
+                    </p>
+                    <p class="mb-0" style="font-family: 'Open Sans', sans-serif; color: #2C2C2C;">
+                        <strong>Teléfono:</strong> <a href="tel:+51969003445" style="color: #2C2C2C; text-decoration: underline;">+51 969 003 445</a>
+                    </p>
+                </div>
+                <!-- Optional: Contact Form Placeholder -->
+                <!-- <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Tu Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Tu Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Tu Mensaje" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-lg">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4" style="background-color: #2C2C2C; color: #F6F5F2;">
+        <div class="container text-center">
+            <p class="mb-2" style="font-family: 'Open Sans', sans-serif;">© <span id="currentYear"></span> VetaBiz Group. Todos los derechos reservados.</p>
+            <div class="social-links mb-2">
+                <!-- Social Media Icons Placeholders -->
+                <a href="#" class="text-decoration-none mx-2" style="color: #F6F5F2;">
+                    <i class="fab fa-linkedin fa-lg"></i> <!-- Placeholder for LinkedIn icon -->
+                </a>
+                <a href="#" class="text-decoration-none mx-2" style="color: #F6F5F2;">
+                    <i class="fab fa-facebook fa-lg"></i> <!-- Placeholder for Facebook icon -->
+                </a>
+                <a href="#" class="text-decoration-none mx-2" style="color: #F6F5F2;">
+                    <i class="fab fa-twitter fa-lg"></i> <!-- Placeholder for Twitter icon -->
+                </a>
+            </div>
+            <p class="mb-0">
+                <a href="#" class="text-decoration-none" style="color: #F6F5F2; font-family: 'Open Sans', sans-serif;">Política de Privacidad</a> | 
+                <a href="#" class="text-decoration-none" style="color: #F6F5F2; font-family: 'Open Sans', sans-serif;">Términos de Servicio</a>
+            </p>
         </div>
     </footer>
 
@@ -112,7 +260,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
+    
+    <!-- FontAwesome for social media icons (optional, but robust) -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script> 
+    <!-- Replace 'your-font-awesome-kit-id.js' with your actual Font Awesome kit ID if you use it -->
+
+    <!-- Custom JS (will be provided later, but linked here) -->
     <script src="script.js"></script>
+    <script>
+        // Set current year dynamically for the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

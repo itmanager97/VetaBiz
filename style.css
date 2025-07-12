@@ -1,110 +1,426 @@
+/* style.css */
+
+/* --- Font Imports (from Google Fonts) --- */
+/*
+   Montserrat Bold – Logo/Headings (700)
+   Montserrat Semi-Bold – Subheadings (600)
+   Open Sans Regular – Body (400)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400&display=swap');
+
+/* --- CSS Variables for Colors and Fonts (Best Practice) --- */
+:root {
+    /* Colors */
+    --primary-gold: #C7A349; /* (199,163,73) */
+    --dark-grey: #2C2C2C;   /* (44,44,44) */
+    --off-white: #F6F5F2;   /* (246,245,242) */
+    --white: #FFFFFF;
+
+    /* Fonts */
+    --font-montserrat-bold: 'Montserrat', sans-serif;
+    --font-montserrat-semibold: 'Montserrat', sans-serif;
+    --font-open-sans-regular: 'Open Sans', sans-serif;
+}
+
+/* --- Global Styles --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-open-sans-regular);
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #202020, #000);
-    color: #fff;
+    background-color: var(--off-white); /* Main background for the page */
+    color: var(--dark-grey); /* Default text color */
+    line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #d1aa62, #1a1a1a);
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 4px solid #000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+/* --- Header Section --- */
+.main-header {
+    background-color: var(--off-white); /* Header background */
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-    letter-spacing: 2px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* Styles for navbar links if needed, Bootstrap handles most of it */
-/* Example:
-nav a {
-    color: #fff !important;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s;
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-nav a:hover {
-    color: #ffd700 !important;
+.logo-img {
+    max-height: 50px; /* Adjust as needed */
+    width: auto;
+    /* By default, the image is hidden in index.html with d-none.
+       If you provide an image and want it to show, remove d-none from the img tag
+       and potentially add a class here to make it block:
+       display: block;
+    */
 }
-*/
 
-/* The .navbar-dark .nav-link styling from Bootstrap is already quite good.
-   You can override specific aspects here if needed.
-   For example, to ensure your custom hover color: */
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffd700 !important; /* Your desired hover color */
+.logo-text {
+    font-family: var(--font-montserrat-bold);
+    font-weight: 700;
+    font-size: 2.2em; /* Adjust size as needed */
+    line-height: 1; /* For better alignment */
+    white-space: nowrap; /* Prevent line breaks */
 }
+
+.logo-part-vetabi {
+    color: var(--dark-grey);
+}
+
+.logo-part-z {
+    color: var(--primary-gold);
+}
+
+.logo-part-group {
+    color: var(--dark-grey);
+    font-size: 0.7em; /* Make "Group" slightly smaller relative to "VetaBiz" */
+    margin-left: 5px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: var(--dark-grey) !important; /* Override Bootstrap dark background */
+    border-bottom: 3px solid var(--primary-gold);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-family: var(--font-montserrat-bold);
+    font-weight: 700;
+    color: var(--off-white) !important;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    max-height: 25px; /* Smaller logo for the navbar */
+    margin-right: 8px;
+}
+
+.navbar-logo-text {
+    color: var(--off-white) !important; /* Ensure text color for brand */
+}
+
 .navbar-dark .navbar-nav .nav-link {
-    transition: color 0.3s;
+    color: var(--off-white) !important;
+    font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.8rem 1.2rem;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--dark-grey) !important; /* Text becomes dark grey on hover */
+    background-color: var(--primary-gold) !important; /* Background becomes gold on hover/active */
+    border-radius: 5px;
+}
 
+/* --- Section General Styles --- */
 section {
-    padding: 50px 0;
-    background: linear-gradient(135deg, #1a1a1a, #000);
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    padding: 80px 0; /* More padding for spacious feel */
 }
 
-section h2 {
+section h1, section h2 {
+    font-family: var(--font-montserrat-bold);
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5em;
-    color: #d1aa62;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    font-size: 2.8em;
+    color: var(--dark-grey);
 }
 
 section p {
-    text-align: center;
+    font-family: var(--font-open-sans-regular);
+    font-weight: 400;
+    text-align: center; /* Default for most paragraphs */
     font-size: 1.1em;
-    line-height: 1.6;
-    color: #fff;
+    color: var(--dark-grey);
 }
 
-.service {
-    margin-bottom: 40px;
-    padding: 20px;
+/* --- Hero Section (#inicio) --- */
+.hero-section {
+    background-color: var(--off-white);
+    color: var(--dark-grey);
+    padding: 100px 0; /* More padding for hero section */
+}
+
+.hero-section h1 {
+    font-size: 3.5em; /* Larger for main heading */
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-section p.lead {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--dark-grey);
+}
+
+.cta-button {
+    background-color: var(--primary-gold) !important;
+    color: var(--dark-grey) !important;
+    font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill-shaped button */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.cta-button:hover {
+    background-color: darken(var(--primary-gold), 10%) !important; /* Slightly darker gold on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: var(--dark-grey) !important;
+}
+
+/* --- Services Section (#servicios) --- */
+#servicios {
+    background-color: var(--off-white);
+}
+
+#servicios h2 {
+    color: var(--dark-grey);
+}
+
+.service-card {
+    background-color: var(--white); /* White background for service cards */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    transition: transform 0.3s;
+    padding: 30px;
+    height: 100%; /* Ensure all cards are same height in a row */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.service:hover {
-    transform: translateY(-5px);
+.service-card:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
-.service h3 {
-    color: #d1aa62;
-    margin-top: 0;
+.service-card h3 {
+    font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    color: var(--primary-gold);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-family: var(--font-open-sans-regular);
+    font-weight: 400;
+    color: var(--dark-grey);
+    font-size: 1em;
+    text-align: center; /* Ensure service text is centered */
+}
+
+/* --- Our Difference Section (#nuestra-diferencia) --- */
+#nuestra-diferencia {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+}
+
+#nuestra-diferencia h2 {
+    color: var(--primary-gold); /* Gold heading for contrast */
+}
+
+#nuestra-diferencia h3 {
+    font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    color: var(--primary-gold);
     font-size: 1.8em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    text-align: left; /* Align headings left in this section */
 }
 
-.service p {
-    color: #fff;
+#nuestra-diferencia p {
+    font-family: var(--font-open-sans-regular);
+    font-weight: 400;
+    color: var(--off-white);
     font-size: 1.1em;
+    text-align: left; /* Align paragraphs left in this section */
 }
 
-footer {
-    background: linear-gradient(135deg, #1a1a1a, #000);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+#nuestra-diferencia img {
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-footer p {
-    margin: 0;
+/* --- About Us Section (#nosotros) --- */
+#nosotros {
+    background-color: var(--off-white);
+}
+
+#nosotros h2 {
+    color: var(--dark-grey);
+}
+
+#nosotros p {
+    color: var(--dark-grey);
+    text-align: left; /* Align paragraphs left in this section */
+}
+
+#nosotros p.lead {
+    font-size: 1.25em; /* Slightly larger for the leading paragraph */
+    font-weight: 600; /* A bit more emphasis */
+    margin-bottom: 25px;
+}
+
+#nosotros img {
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact Section (#contacto) --- */
+#contacto {
+    background-color: var(--primary-gold);
+    color: var(--dark-grey); /* Text color on gold background */
+    padding: 60px 0;
+}
+
+#contacto h2 {
+    color: var(--dark-grey);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#contacto p {
+    color: var(--dark-grey);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contacto .contact-info p {
     font-size: 1.1em;
-    color: #fff;
+    margin-bottom: 5px;
+    text-align: center; /* Center contact info */
+}
+
+#contacto .contact-info a {
+    color: var(--dark-grey);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#contacto .contact-info a:hover {
+    color: var(--off-white); /* Lighter on hover */
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--dark-grey);
+    color: var(--off-white);
+    padding: 30px 0;
+    font-family: var(--font-open-sans-regular);
+    font-weight: 400;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    color: var(--off-white);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: var(--primary-gold); /* Gold links in footer */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--off-white); /* Off-white on hover */
+}
+
+.social-links .fab {
+    color: var(--off-white); /* Icons default to off-white */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links .fab:hover {
+    color: var(--primary-gold); /* Gold on hover */
+}
+
+/* --- Responsive Adjustments (Optional, but Good Practice) --- */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 1.8em;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    section h1, section h2 {
+        font-size: 2em;
+    }
+
+    .service-card {
+        margin-bottom: 25px;
+    }
+
+    #nuestra-diferencia h3,
+    #nosotros h3 {
+        text-align: center; /* Center headings on smaller screens */
+    }
+
+    #nuestra-diferencia p,
+    #nosotros p {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 1.5em;
+    }
+
+    .logo-part-group {
+        font-size: 0.6em;
+    }
+
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    section h1, section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
 }
